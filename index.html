@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read more and Read less </title>
+    <style>
+        body{
+            background-color: beige;
+            align-content: center;
+            text-align: center;
+        }
+        #more{
+            display: none;
+        }
+        button{
+            padding: 1rem;
+            background-color: aquamarine;
+            border-radius: 0.5rem;
+            color: rgb(255, 32, 32);
+        }
+        button:hover{
+            color: azure;
+            padding: 1rem;
+            background-color: rgb(255, 127, 127);
+            border-radius: 0.5rem;
+        }
+        footer{
+            background-color: black;
+            color: rgb(255, 9, 9);
+            margin-top: 3%;
+            border-radius: 10%;
+        }
+        footer:hover{
+            background-color: rgb(190, 233, 0);
+            color: rgb(62, 9, 255);
+            margin-top: 3%;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Read more and Read Less</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit minus dicta rerum. Nostrum assumenda eos corrupti autem odio tempore atque. 
+        <span id="dots">...</span> <span id="more">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet reiciendis minima officiis molestiae, dolorum quaerat sunt commodi porro earum expedita?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam molestiae expedita ea animi minima, nisi totam nesciunt vel repellendus quod accusamus culpa aut aspernatur cum possimus dolore quaerat voluptates nihil! Maiores ducimus enim quo quas nulla fuga doloremque excepturi eos!
+        </span>
+        
+    </p>
+    <button onclick="cmFunction()" id="myBtn">Read More</button>
+    <footer>
+        This is made by C.Manojkumar
+    </footer>
+
+    <script>
+        function cmFunction(){
+            var dots = document.getElementById("dots");
+            var Text = document.getElementById("more");
+            var myBtn = document.getElementById("myBtn");
+
+            if(dots.style.display === "none") {
+                dots.style.display = "inline";
+                Text.style.display = "none";
+                myBtn.innerHTML = "Read MORE"
+            }   else {
+                dots.style.display = "none";
+                myBtn.innerHTML = "Read Less";
+                Text.style.display = "inline";
+            }
+        }
+    </script>
+</body>
+</html>
